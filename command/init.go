@@ -29,7 +29,7 @@ func init() {
 		"hello":  {Cmd: TempNotSupport, Arity: -1, Flag: CmdNone, Stats: CmdStats{Calls: 0, MicroSec: 0}},
 		"quit":   {Cmd: Quit, Arity: 1, Flag: CmdNone, Stats: CmdStats{Calls: 0, MicroSec: 0}},
 		"select": {Cmd: Select, Arity: 2, Flag: CmdNone, Stats: CmdStats{Calls: 0, MicroSec: 0}},
-		"swapdb": {Cmd: SwapDB, Arity: 3, Flag: CmdNone, Stats: CmdStats{Calls: 0, MicroSec: 0}},
+		"swapdb": {Cmd: TempNotSupport, Arity: 3, Flag: CmdNone, Stats: CmdStats{Calls: 0, MicroSec: 0}},
 
 		// client
 		"client|help": {Cmd: ClientHelp, Arity: 2, Flag: CmdNone, Stats: CmdStats{Calls: 0, MicroSec: 0}},
