@@ -32,11 +32,11 @@ func ExpireCommon(ctx *CmdContext) error {
 }
 
 // compat server
-func GenericCmdWithKey(ctx *CmdContext, tableName string) (string, error) {
+func GenericCmdWithKey(ctx *CmdContext, cmdName string) (string, error) {
 	key := ctx.Args[0]
 	rowKey := []*table.Column{
 		table.NewColumn(dbColumnName, ctx.CodecCtx.DB.ID),
 		table.NewColumn(keyColumnName, key),
 	}
-	return ctx.CodecCtx.DB.Storage.ObServerCmd(ctx.CodecCtx.DB.Ctx, tableName, rowKey, ctx.PlainReq)
+	return ctx.CodecCtx.DB.Storage.ObServerCmd(ctx.CodecCtx.DB.Ctx, cmdName, rowKey, ctx.PlainReq)
 }
