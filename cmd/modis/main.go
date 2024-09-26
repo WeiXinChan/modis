@@ -41,9 +41,6 @@ var (
 )
 
 func main() {
-	// go func() {
-	// 	http.ListenAndServe(":6060", nil)
-	// }()
 	// try read flags
 	sv, configPath := readFlags()
 	if sv {
